@@ -1,6 +1,3 @@
-[submodule "CLIP4IDC"]
-	path = CLIP4IDC
-	url = https://github.com/sushizixin/CLIP4IDC
-[submodule "RobustChangeCaptioning"]
-	path = RobustChangeCaptioning
-	url = https://github.com/Seth-Park/RobustChangeCaptioning
+[submodule "lolstaticdata"]
+	path = lolstaticdata
+	url = https://github.com/meraki-analytics/lolstaticdata
