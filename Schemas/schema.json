@@ -1,0 +1,42 @@
+{
+  "vfx_properties": {
+    "startTime": {
+      "type": "number",
+      "format": "float",
+      "description": "Time (in seconds) when the VFX starts",
+      "examples": [
+        0.2
+      ]
+    },
+    "endTime": {
+      "type": "number",
+      "format": "float",
+      "description": "Time (in seconds) when the VFX ends",
+      "examples": [
+        5.0
+      ]
+    },
+    "shape": {
+      "type": "string",
+      "description": "General shape of the VFX (e.g., 'sphere', 'cone', 'beam', 'line', 'square')"
+    },
+    "color": {
+      "type": "string",
+      "description": "Dominant color(s) of the VFX and corresponding hex code(s)",
+      "examples": [
+        {"Red": "#8B0000"},
+        {"Blue": "#007bff"}
+      ]
+    },
+    "projectileCount": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of projectiles (if the VFX involves projectiles)"
+    },
+    "required": [
+      "color",
+      "startTime",
+      "endTime"
+    ]
+  }
+}
