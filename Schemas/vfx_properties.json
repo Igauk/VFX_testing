@@ -1,0 +1,25 @@
+{
+  "vfx_properties": {
+    "shape": {
+      "type": "string",
+      "description": "General shape of the VFX (e.g., 'sphere', 'cone', 'beam', 'line', 'square')"
+    },
+    "color": {
+      "type": "array",
+      "items": {
+        "color_name": "hex_code",
+        "description": "Dominant color of the VFX and corresponding hex code"
+      }
+    },
+    "projectileCount": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of projectiles (if the VFX involves projectiles)"
+    },
+    "required": [
+      "shape",
+      "color",
+      "projectileCount"
+    ]
+  }
+}

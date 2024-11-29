@@ -1,0 +1,36 @@
+{
+  "key_video_moment": {
+    "type": "array",
+    "item": {
+      "startTime": {
+        "type": "number",
+        "format": "float",
+        "description": "Time (in seconds) when the VFX starts",
+        "examples": [
+          0.2
+        ]
+      },
+      "endTime": {
+        "type": "number",
+        "format": "float",
+        "description": "Time (in seconds) when the VFX ends",
+        "examples": [
+          5.0
+        ]
+      },
+      "vfx_description": {
+        "type": "string",
+        "description": "Textual description of the VFX at the specified moment, including motion, visual effects, and context"
+      },
+      "audio_description": {
+        "type": "string",
+        "description": "Description of any associated audio effects (if present), e.g., 'whooshing', 'explosive boom'"
+      },
+      "required": [
+        "startTime",
+        "endTime",
+        "vfx_description"
+      ]
+    }
+  }
+}
