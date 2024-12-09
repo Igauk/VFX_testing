@@ -1,6 +1,5 @@
-from typing import Literal
-
 import json
+from typing import Literal
 
 
 class LoLChampReader:
@@ -23,13 +22,22 @@ class LoLChampReader:
             return data
 
         filtered_data = {k: v for k, v in data.items() if v is not None}
-        filtered_data.pop('icon')  # Do not need icon
         filtered_data['effects'] = ' '.join([effect['description'] for effect in filtered_data['effects']])
         if 'cooldown' in filtered_data:
             filtered_data['cooldown'] = filtered_data['cooldown']['modifiers'][0]['values'][-1]
         if 'cost' in filtered_data:
             filtered_data['cost'] = filtered_data['cost']['modifiers'][0]['values'][-1]
-        return filtered_data
+        visual_keys = {'name',
+                       'effects',
+                       'targeting',
+                       'affects',
+                       'spellEffects',
+                       'projectile',
+                       'speed',
+                       'width',
+                       'castTime',
+                       'effectRadius',
+                       'notes'}
 
-
-print(LoLChampReader().get_champ_ability('Ahri', 'Q'))
+        visual_data = {key: value for key, value in filtered_data.items() if key in visual_keys}
+        return visual_data
